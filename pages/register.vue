@@ -78,7 +78,7 @@ export default {
       const email = this.email;
       const password = this.password;
       axios
-        .post("http://localhost:8888/api/v1/register", {
+        .post("https://my-basecamp-eta.vercel.app/api/v1/register", {
           email: email,
           password: password,
         })

@@ -51,7 +51,7 @@
             class="bg-blue-600 hover:bg-black text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
           >
-            Create
+            Submit
           </button>
         </div>
       </form>
@@ -66,7 +66,7 @@ import axios from "axios";
 const fetchData = async () => {
   const route = useRoute();
   const id = route.params.id;
-  const response = await axios.get(`http://localhost:8888/api/v1/project/${id}`);
+  const response = await axios.get(`https://my-basecamp-eta.vercel.app/api/v1/project/${id}`);
   return response.data;
 };
 
@@ -85,7 +85,7 @@ function handlesubmit(e) {
     description: project.value.description,
   };
   axios
-  .post(`http://localhost:8888/api/v1/project/${id}`, data)
+  .post(`https://my-basecamp-eta.vercel.app/api/v1/project/${id}`, data)
   .then((res) => {
       window.location.href = `/`;
     })

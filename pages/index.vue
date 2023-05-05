@@ -33,7 +33,7 @@ export default {
   },
   mounted() {
     this.id = localStorage.getItem("id");
-    axios.get('http://localhost:8888/api/v1/project')
+    axios.get('https://my-basecamp-eta.vercel.app/api/v1/project')
       .then(res => {
         this.data = res.data.project;
       })

@@ -77,7 +77,7 @@ export default {
       const name = this.name;
       const description = this.description;
       const user_id = localStorage.getItem("id");
-      axios.put("http://localhost:8888/api/v1/project", {
+      axios.put("https://my-basecamp-eta.vercel.app/api/v1/project", {
         name: name,
         description: description,
         user_id: user_id
